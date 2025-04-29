@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Abas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="cima">
+        <a href="https://calendar.google.com/" target="_blank">
+            <img src="./imagens/agenda.png" alt="Google Calendar">
+        </a>
+
+        <a href="https://web.whatsapp.com/" target="_blank">
+            <img src="./imagens/whatsapp.png" alt="Whatsapp">
+        </a>
+
+
+        <a href="https://mail.google.com/" target="_blank">
+            <img src="./imagens/gmail.png" alt="Gmail">
+        </a>
+
+        <a href="https://drive.google.com/" target="_blank">
+            <img src="./imagens/drive.webp" alt="Drive">
+        </a>
+
+        <a href="https://classroom.google.com/" target="_blank">
+            <img src="./imagens/classroom.png" alt="Classroom">
+        </a>
+        <a href="https://maps.google.com/" target="_blank">
+            <img src="./imagens/maps.png" alt="Maps">
+        </a>
+        <a href="https://youtube.com/" target="_blank">
+            <img src="./imagens/youtube.jpeg" alt="Youtube">
+        </a>
+        <a href="https://music.youtube.com/" target="_blank">
+            <img src="./imagens/ytMusic.jpeg" alt="Youtube Music">
+        </a>
+
+        <a href="https://keep.google.com/u/0/" target="_blank">
+            <img src="./imagens/keep.jpeg" alt="Google Keep">
+        </a>
+        <a href=" https://sistemas2.utfpr.edu.br/" target="_blank">
+            <img src="./imagens/utfprAcademico.png" alt="Sistema Acadêmico UTFPR">
+        </a>
+
+        
+        <a href=" https://www.google.com/search?q=previsao+do+tempo+campo+mourao&oq=previsao+do+tempo+campo+mourao&gs_l=psy-ab.3..0l2j0i22i30k1l3.16242.22304.0.22632.13.13.0.0.0.0.107.1282.7j6.13.0....0...1.1.64.psy-ab..0.13.1277....0.-l0_OSgE3sg" target="_blank">
+            <img src="./imagens/previsaoDoTempo.jpeg" alt="Previsão do tempo">
+        </a>
+
+
+
+    </div>
+
+    <div class="tab-container">
+        <!-- Botões das abas -->
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="openTab('geral')">Geral</button>
+            <button class="tab-button" onclick="openTab('cris')">Cris</button>
+            <button class="tab-button" onclick="openTab('rdms')">Rdms</button>
+            <button class="tab-button" onclick="openTab('nick')">Nick</button>
+        </div>
+
+        <!-- Conteúdo das abas (será carregado dinamicamente) -->
+        <div id="tab-content"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
