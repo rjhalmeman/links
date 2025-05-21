@@ -12,7 +12,7 @@ body {
     padding: 15px;
 }
 
-#lista-horizontal,#lista-rdms,#lista-rdms-linha2 {
+#lista-horizontal,#lista-rdms,#lista-rdms-linha2,#lista-rdms-linha3 {
     display: flex;
     list-style-type: none;
     padding: 0;
@@ -22,6 +22,10 @@ body {
 }
 
 #lista-rdms {
+    background-color: aqua;
+}
+
+#lista-rdms-linha3 {
     background-color: aqua;
 }
 
