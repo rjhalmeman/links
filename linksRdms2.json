@@ -69,21 +69,14 @@
     "img": "./imagens/rastreamentoegressos.png",
     "alt": "Planilha de egressos"
   },
- ,
   {
     "href": "https://docs.google.com/spreadsheets/d/1p7vgHoELfsDQTROxe0Xdh5hPn24g--0L7Vdttywk3qM/edit?gid=66679120#gid=66679120",
     "img": "./imagens/log.png",
     "alt": "LOG"
-  },  {
+  },
+  {
     "href": "https://gopro.com/media-library",
     "img": "./imagens/gopro.jpeg",
     "alt": "GoPro fotos"
   }
-
-
-
-  
-
-
- 
 ]
