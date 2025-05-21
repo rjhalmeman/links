@@ -29,11 +29,7 @@
     "img": "./imagens/mapChacara.png",
     "alt": "Chácara"
   },
-  {
-    "href": "https://www.youtube.com/@radamesjulianohalmeman8258",
-    "img": "./imagens/canalYoutube.png",
-    "alt": "Canal no Youtube"
-  },
+
   {
     "href": "https: //docs.google.com/document/d/1zRhpQ_E-4CHpcMxCagkRsqww-hV2vDKEhK9wbecLtRY/edit",
     "img": "./imagens/gitDicas.png",
