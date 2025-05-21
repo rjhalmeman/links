@@ -63,5 +63,10 @@
       "href": "https://www.gov.br/servidor/pt-br/",
       "img": "./imagens/govbr.png",
       "alt": "Sigepe"
+    },
+    {
+      "href": "https://www.mercadolivre.com.br/",
+      "img": "./imagens/mercadolivre.png",
+      "alt": "Mercado Livre"
     }
   ]
