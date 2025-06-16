@@ -18,7 +18,14 @@
     "href": "https://bibleproject.com/",
     "img": "./imagens/holybible.jpeg",
     "alt": "Bible Project - English"
+  },
+  {
+    "href": "https://translate.google.com/",
+    "img": "./imagens/googletranslator.jpeg",
+    "alt": "Google translator"
   }
+
+  
 
 
 
