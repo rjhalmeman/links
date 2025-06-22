@@ -23,6 +23,11 @@
     "href": "https://translate.google.com/",
     "img": "./imagens/googletranslator.png",
     "alt": "Google translator"
+  },
+  {
+    "href": "https://x.com/home",
+    "img": "./imagens/x.png",
+    "alt": "Twitter - X"
   }
 
   
