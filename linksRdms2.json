@@ -1,5 +1,10 @@
 [
   {
+    "href": "https://chat.deepseek.com/",
+    "img": "./imagens/deepseek.png",
+    "alt": "Chat deepseek IA"
+  }, 
+   {
     "href": "https://chatgpt.com/",
     "img": "./imagens/chatgpt.jpeg",
     "alt": "Chat gpt IA"
