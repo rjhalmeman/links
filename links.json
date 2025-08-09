@@ -60,6 +60,54 @@
     "alt": "Previsão do tempo"
   },
   {
+    "href": "https://www.simepar.br/simepar/forecast_by_counties/4104303",
+    "img": "./imagens/simepar.png",
+    "alt": "Simepar"
+  },
+  {
+    "href": "https://www.netflix.com/br/",
+    "img": "./imagens/netflix.png",
+    "alt": "Netflix"
+  },
+  {
+    "href": "https://www.disneyplus.com/pt-br",
+    "img": "./imagens/disneyPlus.png",
+    "alt": "Disney Plus"
+  },
+  {
+    "href": "https://www.primevideo.com/",
+    "img": "./imagens/primeVideo.png",
+    "alt": "Amazon Prime Video"
+  },
+  {
+    "href": "https://www.hbomax.com/",
+    "img": "./imagens/hboMax.png",
+    "alt": "HBO Max"
+  },
+  {
+    "href": "https://www.globoplay.com/",
+    "img": "./imagens/globoplay.png",
+    "alt": "Globoplay"
+  },
+  {
+    "href": "https://www.spotify.com/br/",
+    "img": "./imagens/spotify.png",
+    "alt": "Spotify"
+  },
+  {
+    "href": "https://www.microsoft.com/pt-br/microsoft-365",
+    "img": "./imagens/microsoft365.png",
+    "alt": "Microsoft 365"
+  },
+  {
+    "href": "https://www.linkedin.com/",
+    "img": "./imagens/linkedin.png",
+    "alt": "LinkedIn"
+  },
+  {
+    "href": "
+
+  {
     "href": "http://www.bb.com.br/",
     "img": "./imagens/bb.png",
     "alt": "Banco do Brasil"
