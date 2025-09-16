@@ -48,6 +48,11 @@
     "href": "https://www.appsheet.com/home/apps#recent",
     "img": "./imagens/appsheet.svg",
     "alt": "App Sheet Google"
+  },
+  {
+    "href": "https://docs.google.com/document/d/1GRDzJ2EvgFa7roGDXbJXoU59-19k6EIvVryiuyZp4LA/edit",
+    "img": "./imagens/ideas.png",
+    "alt": "Ideias interessantes"
   }
   
 
