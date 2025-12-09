@@ -53,8 +53,15 @@
     "href": "https://docs.google.com/document/d/1GRDzJ2EvgFa7roGDXbJXoU59-19k6EIvVryiuyZp4LA/edit",
     "img": "./imagens/ideias.png",
     "alt": "Ideias interessantes"
+  },
+  {
+    "href": "http://sei.utfpr.edu.br/",
+    "img": "./imagens/sei.png",
+    "alt": "SEI"
   }
   
+  
 
+  
   
 ]
