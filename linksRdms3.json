@@ -58,12 +58,17 @@
     "href": "http://sei.utfpr.edu.br/",
     "img": "./imagens/sei.png",
     "alt": "SEI"
+  },  {
+    "href": "https://docs.google.com/document/d/1vo6bc020bmmx2223vIKSI8t1JQS41C68RMoMhVT3k0E/edit",
+    "img": "./imagens/simposio.png",
+    "alt": "Notas simposio estágios TIII"
   },
   {
     "href": "https://www.marinetraffic.com/en/ais/home/shipid:461654/zoom:9",
     "img": "./imagens/ship.jpeg",
     "alt": "Marine Traffic"
   }
+  
   
  
   
