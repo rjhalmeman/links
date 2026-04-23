@@ -24,6 +24,11 @@
     "img": "./imagens/alfa.png",
     "alt": "Alfa no github"
   },
+    {
+    "href": "https://github.com/rjhalmeman/projeto-integrador-2026",
+    "img": "./imagens/projeto-integrador.png",
+    "alt": "PI 2026 no github"
+  },
   {
     "href": "https://www.youtube.com/@radamesjulianohalmeman8258",
     "img": "./imagens/canalYoutube.png",
