@@ -67,11 +67,10 @@
     "href": "https://www.marinetraffic.com/en/ais/home/shipid:461654/zoom:9",
     "img": "./imagens/ship.jpeg",
     "alt": "Marine Traffic"
-  }
-,
+  },
   {
     "href": "https://rjhalmeman.github.io/fascinante/",
-    "img": "./imagens/fascinante.jpeg",
+    "img": "./imagens/fascinante.png",
     "alt": "Vídeos e assuntos interessantes/fascinantes"
   }
   
