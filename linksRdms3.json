@@ -72,6 +72,11 @@
     "href": "https://rjhalmeman.github.io/fascinante/",
     "img": "./imagens/fascinante.png",
     "alt": "Vídeos e assuntos interessantes/fascinantes"
+  },
+  {
+    "href": "https://www.overleaf.com/project",
+    "img": "./imagens/overleaf.png",
+    "alt": "Editor laTeX online"
   }
   
   
