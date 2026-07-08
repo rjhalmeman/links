@@ -2,7 +2,7 @@
 // CONFIGURAÇÕES GLOBAIS
 // ==========================================
 const CONFIG = {
-    baseItemSize: 100,      // Tamanho do ícone/imagem em pixels
+    baseItemSize: 80,      // Tamanho do ícone/imagem em pixels
     spacingRatio: 0.3,      // Espaçamento de profundidade
     maxSpeed: 1.5,          // Velocidade máxima do mouse
     easeFactor: 0.05,       // Suavização da busca
