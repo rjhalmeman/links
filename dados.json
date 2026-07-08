@@ -59,7 +59,7 @@
     "img": "./imagens/previsaoDoTempo.jpeg",
     "alt": "Previsão do tempo"
   },
-    {
+  {
     "href": "https://www.simepar.br/simepar/forecast_by_counties/4104303",
     "img": "./imagens/simepar.png",
     "alt": "Simepar"
@@ -78,16 +78,13 @@
     "href": "https://www.mercadolivre.com.br/",
     "img": "./imagens/mercadolivre.png",
     "alt": "Mercado Livre"
-  }
-
-  ,
-
- {
+  },
+  {
     "href": "https://drive.google.com/drive/folders/1luK7t_eTMjemJPx10nIBBNr41d2xb-6s",
     "img": "./imagens/pasta2025.png",
     "alt": "2025 no drive"
   },
-{
+  {
     "href": "https://drive.google.com/drive/folders/1wvuf5c9d2oA2L92mB6vqpFQZGTpTu4E8",
     "img": "./imagens/pasta2026.png",
     "alt": "2026 no drive"
@@ -107,20 +104,20 @@
     "img": "./imagens/alfa.png",
     "alt": "Alfa no github"
   },
-    {
-    "href": "https://github.com/rjhalmeman/projeto-integrador-2026",
-    "img": "./imagens/projeto-integrador.png",
-    "alt": "2026 - PI no github "
-  },
-   {
-    "href": "https://github.com/rjhalmeman/algoritmos-2026",
+  {
+    "href": "https://github.com/rjhalmeman/algoritmos-2026/",
     "img": "./imagens/algoritmosGit.jpg",
     "alt": "2026 - Algoritmos no github "
   },
-   {
-    "href": "https://github.com/rjhalmeman/dw1-2026",
+  {
+    "href": "https://github.com/rjhalmeman/dw1-2026/",
     "img": "./imagens/dw1.jpg",
     "alt": "2026 - Dw1 no github "
+  },
+  {
+    "href": "https://github.com/rjhalmeman/projeto-integrador-2026",
+    "img": "./imagens/projeto-integrador.png",
+    "alt": "2026 - PI no github "
   },
   {
     "href": "https://www.youtube.com/@radamesjulianohalmeman8258",
@@ -176,15 +173,13 @@
     "href": " https://www.satview.org/?sat_id=20580U",
     "img": "./imagens/satview.png",
     "alt": "Satview"
-  }
-  ,
-  
+  },
   {
     "href": "https://chat.deepseek.com/",
     "img": "./imagens/deepseek.png",
     "alt": "IA deepseek"
-  }, 
-   {
+  },
+  {
     "href": "https://chatgpt.com/",
     "img": "./imagens/chatgpt.jpeg",
     "alt": "IA Chat gpt"
@@ -204,8 +199,6 @@
     "img": "./imagens/notebookLm.jpeg",
     "alt": "IA notebookLM Google"
   },
-
-
   {
     "href": "https://assinador.iti.br/assinatura/",
     "img": "./imagens/govbr.png",
@@ -216,7 +209,6 @@
     "img": "./imagens/mapChacara.png",
     "alt": "Chácara"
   },
-
   {
     "href": "https://docs.google.com/document/d/1zRhpQ_E-4CHpcMxCagkRsqww-hV2vDKEhK9wbecLtRY/edit?tab=t.0",
     "img": "./imagens/gitDicas.png",
@@ -256,8 +248,7 @@
     "href": "https://gopro.com/media-library",
     "img": "./imagens/gopro.jpeg",
     "alt": "GoPro fotos"
-  }
-  ,
+  },
   {
     "href": "https://docs.google.com/spreadsheets/d/1yxvKuZinUdwosppWVVmm9nzvYT4YsXALn19wABmI2fg/edit?gid=1612493588#gid=1612493588",
     "img": "./imagens/planilhacontas.png",
@@ -317,7 +308,8 @@
     "href": "http://sei.utfpr.edu.br/",
     "img": "./imagens/sei.png",
     "alt": "SEI"
-  },  {
+  },
+  {
     "href": "https://docs.google.com/document/d/1vo6bc020bmmx2223vIKSI8t1JQS41C68RMoMhVT3k0E/edit",
     "img": "./imagens/simposio.png",
     "alt": "Notas simposio estágios TIII - drive"
@@ -337,6 +329,4 @@
     "img": "./imagens/overleaf.png",
     "alt": "Editor laTeX online"
   }
-  
-
 ]
