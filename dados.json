@@ -2,7 +2,7 @@
   {
     "href": "https://calendar.google.com/",
     "img": "./imagens/agenda.png",
-    "alt": "Google Calendar"
+    "alt": "Agenda - Google Calendar"
   },
   {
     "href": "https://web.whatsapp.com/",
@@ -67,7 +67,7 @@
   {
     "href": "http://www.bb.com.br/",
     "img": "./imagens/bb.png",
-    "alt": "Banco do Brasil"
+    "alt": "bb - Banco do Brasil"
   },
   {
     "href": "https://www.gov.br/servidor/pt-br/",
@@ -115,7 +115,7 @@
   {
     "href": "https://www.youtube.com/@radamesjulianohalmeman8258",
     "img": "./imagens/canalYoutube.png",
-    "alt": "Canal no Youtube"
+    "alt": "Canal no Youtube - radames@professores"
   },
   {
     "href": "https://github.com/rjhalmeman",
@@ -145,7 +145,7 @@
   {
     "href": "https://mail.google.com/mail/u/0/#search/is%3Aunread+%2Bfacebook+OR+%2Blinkedin+OR+%2Blojadomecanico+OR+%2Bbanggood+OR+%2Bebay+OR+%2BAgenda+OR+%2BGOG+OR+%2Babes++OR+%2BKennedy++OR+%2BSmiles+OR+%2BTwitter+OR+%2BPinterest+OR+%2BAmazon+OR+%2BAliExpress+OR+%2BNetflix+OR+%2BResearchGate+OR+%2BAbastece+OR+Panvel+OR+lanterna+OR+Danki+OR+bcmed+OR+Alex+OR+Poisson+OR+Gshield+OR+prolife+OR+Lenscope+OR+wenes+OR+kabum+OR+Esparta+OR+Temu+OR+livelo+OR+kmv",
     "img": "./imagens/gmail.png",
-    "alt": "Limpar gmail"
+    "alt": "Gmail - Limpar"
   },
   {
     "href": "https://docs.google.com/document/d/1BazlN3kS_R-v8RSiJmV5f1zPsxkkIML5rVD5i7vK6WE/edit?tab=t.0#heading=h.m09e6q1it3zj",
@@ -172,17 +172,17 @@
   {
     "href": "https://chat.deepseek.com/",
     "img": "./imagens/deepseek.png",
-    "alt": "Chat deepseek IA"
+    "alt": "IA deepseek"
   }, 
    {
     "href": "https://chatgpt.com/",
     "img": "./imagens/chatgpt.jpeg",
-    "alt": "Chat gpt IA"
+    "alt": "IA Chat gpt"
   },
   {
     "href": "https://claude.ai",
     "img": "./imagens/claudeia.png",
-    "alt": "Claude IA"
+    "alt": "IA Claude"
   },
   {
     "href": "https://gemini.google.com/app",
@@ -192,14 +192,14 @@
   {
     "href": "https://notebooklm.google.com/",
     "img": "./imagens/notebookLm.jpeg",
-    "alt": "IA para estudos"
+    "alt": "IA notebookLM Google"
   },
 
 
   {
     "href": "https://assinador.iti.br/assinatura/",
     "img": "./imagens/govbr.png",
-    "alt": "Assinador de documentos"
+    "alt": "Gov Assinador de documentos"
   },
   {
     "href": "https://drive.google.com/open?id=1y0PC7HK-2IA9EmOY6wO2kDNohno",
@@ -221,11 +221,6 @@
     "href": "https://docs.google.com/spreadsheets/d/1V1VNUWzGEEqobjRUrkUbB5BHsA1E2v3dH_UlhfKa6eQ/edit#gid=0",
     "img": "./imagens/estagio.png",
     "alt": "Orientações de estágio"
-  },
-  {
-    "href": "https://assinador.iti.br/assinatura/",
-    "img": "./imagens/assinador.png",
-    "alt": "Assinar documentos gov.br"
   },
   {
     "href": "http://ai2.appinventor.mit.edu/",
@@ -252,7 +247,6 @@
     "img": "./imagens/gopro.jpeg",
     "alt": "GoPro fotos"
   }
-
   ,
   {
     "href": "https://docs.google.com/spreadsheets/d/1yxvKuZinUdwosppWVVmm9nzvYT4YsXALn19wABmI2fg/edit?gid=1612493588#gid=1612493588",
@@ -267,12 +261,12 @@
   {
     "href": "https://drive.google.com/drive/folders/0B2rJ03w59OfkYlYtbG1yamszRXM",
     "img": "./imagens/irpfleao.png",
-    "alt": "IRPF"
+    "alt": "IRPF - imposto de renda"
   },
   {
     "href": "https://music.youtube.com/channel/UCpDd9PNiPHb12yyWo2miyog",
     "img": "./imagens/englishAvenue.jpg",
-    "alt": "English Avenue"
+    "alt": "English Avenue - canal de ingles no youtube"
   },
   {
     "href": "https://bibleproject.com/",
@@ -292,12 +286,12 @@
   {
     "href": "https://script.google.com/a/macros/professores.utfpr.edu.br/s/AKfycbwvf1aGWLubDnqZalzOBSgcNs5tIHU5xp46CUFqEeRL/dev",
     "img": "./imagens/blood-pressure.png",
-    "alt": "Blood pressure"
+    "alt": "Blood pressure - planilha de pressão arterial"
   },
   {
     "href": "https://docs.google.com/spreadsheets/d/1p9qJ5YmKUAbaPEIsE8-cJbvRSH6n737B1yCHf2m5C8Q/edit?gid=0#gid=0",
     "img": "./imagens/medicos-radames.png",
-    "alt": "Médicos Radames"
+    "alt": "Médicos Radames - contatos e informações"
   },
   {
     "href": "https://www.appsheet.com/home/apps#recent",
@@ -316,7 +310,7 @@
   },  {
     "href": "https://docs.google.com/document/d/1vo6bc020bmmx2223vIKSI8t1JQS41C68RMoMhVT3k0E/edit",
     "img": "./imagens/simposio.png",
-    "alt": "Notas simposio estágios TIII"
+    "alt": "Notas simposio estágios TIII - drive"
   },
   {
     "href": "https://www.marinetraffic.com/en/ais/home/shipid:461654/zoom:9",
