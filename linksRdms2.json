@@ -20,6 +20,13 @@
     "alt": "IA Gemini Google"
   },
   {
+    "href": "https://notebooklm.google.com/",
+    "img": "./imagens/notebookLm.jpeg",
+    "alt": "IA para estudos"
+  },
+
+
+  {
     "href": "https://assinador.iti.br/assinatura/",
     "img": "./imagens/govbr.png",
     "alt": "Assinador de documentos"
