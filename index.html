@@ -1,30 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Links Halmeman</title>
-    <link rel="stylesheet" href="newStyle.css">
+    <title>Carrossel 3D Elíptico</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h2>Links Halmeman</h2>
 
-    <div class="container">
-        <ul id="lista-horizontal">
-            <!-- Os itens serão adicionados aqui via JavaScript -->
-        </ul>
-    </div>
+    <header class="search-header">
+        <label for="searchInput">Pesquisar:</label>
+        <input type="text" id="searchInput" list="carousel-options" placeholder="Ex: Item 5" autocomplete="off">
+        <datalist id="carousel-options">
+            </datalist>
+    </header>
 
-    <div class="container">
-        <ul id="lista-rdms">
-            <!-- Os itens serão adicionados aqui via JavaScript -->
-        </ul>
-        <ul id="lista-rdms-linha2">
-            <!-- Os itens serão adicionados aqui via JavaScript -->
-        </ul> <ul id="lista-rdms-linha3">
-            <!-- Os itens serão adicionados aqui via JavaScript -->
-        </ul>
-    </div>  
-    <script src="new.js"></script>
+    <main class="container">
+        <section class="carousel-content" id="carousel">
+            </section>
+    </main>
+
+    <script src="index.js" defer></script>
 </body>
 </html>

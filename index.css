@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.search-header {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: #1e1e1e;
+    padding: 15px 25px;
+    border-radius: 8px;
+    border: 2px solid #333;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.search-header input {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background: #2a2a2a;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 250px;
+}
+
+.search-header input:focus {
+    border-color: #00adb5;
+}
+
+.container {
+    width: 90vw;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: var(--perspective, 1200px); 
+}
+
+.carousel-content {
+    width: var(--item-size);
+    height: var(--item-size);
+    position: relative;
+    transform-style: preserve-3d;
+    /* Puxa o palco para trás para que o item da frente mantenha o tamanho original */
+    transform: translateZ(var(--translate-z)); 
+}
+
+.carousel-item {
+    position: absolute;
+    width: var(--item-size); 
+    height: var(--item-size);
+    border: 2px solid #333;
+    background: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* O transform agora é aplicado via JS frame a frame */
+}
+
+.carousel-item:hover {
+    border-color: #00adb5;
+    box-shadow: 0 10px 30px rgba(0, 173, 181, 0.4);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
