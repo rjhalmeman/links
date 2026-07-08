@@ -112,6 +112,16 @@
     "img": "./imagens/projeto-integrador.png",
     "alt": "2026 - PI no github "
   },
+   {
+    "href": "https://github.com/rjhalmeman/algoritmos-2026",
+    "img": "./imagens/algoritmosGit.jpg",
+    "alt": "2026 - Algoritmos no github "
+  },
+   {
+    "href": "https://github.com/rjhalmeman/dw1-2026",
+    "img": "./imagens/dw1.jpg",
+    "alt": "2026 - Dw1 no github "
+  },
   {
     "href": "https://www.youtube.com/@radamesjulianohalmeman8258",
     "img": "./imagens/canalYoutube.png",
