@@ -105,24 +105,29 @@ function setupMouseControl() {
 function setupSearchControl() {
     const searchInput = document.getElementById('searchInput');
 
-    // NOVA MELHORIA: Seleciona o texto atual quando o campo ganha o foco
+    // Seleciona texto quando ganha foco
     searchInput.addEventListener('focus', (e) => {
         e.target.select();
     });
 
-    // Escuta o evento de digitação/seleção do Datalist
+    // Escuta o evento de digitação
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase().trim();
         
         if (query === '') {
             carouselMode = 'mouse';
+            searchInput.style.borderColor = ''; // Resetar cor
             return;
         }
 
-        // Tenta achar uma correspondência exata com a lista
-        const matchIndex = itemsData.findIndex(item => item.alt.toLowerCase() === query);
+        // Busca mais flexível - verifica se o termo está CONTIDO no alt
+        const matchIndex = itemsData.findIndex(item => 
+            item.alt.toLowerCase().includes(query) || // Busca por parte do texto
+            item.alt.toLowerCase().split(' ').some(word => word.startsWith(query)) // Busca por palavra que começa com
+        );
 
         if (matchIndex !== -1) {
+            // Item encontrado!
             carouselMode = 'search';
             const itemAngle = matchIndex * (360 / totalItems);
             const target = -itemAngle;
@@ -132,6 +137,19 @@ function setupSearchControl() {
             if (diff < -180) diff += 360;
             
             searchTargetRotation = currentRotation + diff;
+            
+            // Feedback visual: borda verde quando encontra
+            searchInput.style.borderColor = '#4CAF50';
+            searchInput.style.borderWidth = '2px';
+            searchInput.style.borderStyle = 'solid';
+        } else {
+            // Não encontrou - feedback visual
+            searchInput.style.borderColor = '#ff4444';
+            searchInput.style.borderWidth = '2px';
+            searchInput.style.borderStyle = 'solid';
+            
+            // Opcional: mostrar mensagem de "não encontrado"
+            // showSearchFeedback('Item não encontrado');
         }
     });
 
@@ -139,11 +157,40 @@ function setupSearchControl() {
     searchInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             const query = e.target.value.toLowerCase().trim();
-            const matchItem = itemsData.find(item => item.alt.toLowerCase() === query);
+            
+            // Busca mais flexível também para o ENTER
+            const matchItem = itemsData.find(item => 
+                item.alt.toLowerCase().includes(query) ||
+                item.alt.toLowerCase().split(' ').some(word => word.startsWith(query))
+            );
             
             if (matchItem) {
                 window.open(matchItem.href, '_blank');
+                // Limpar busca após abrir
+                searchInput.value = '';
+                searchInput.style.borderColor = '';
+                carouselMode = 'mouse';
+            } else {
+                // Feedback visual
+                searchInput.style.borderColor = '#ff4444';
+                searchInput.style.borderWidth = '2px';
+                searchInput.style.borderStyle = 'solid';
+                
+                // Mostrar erro
+                showErrorNotification(`"${e.target.value}" não encontrado`);
+                
+                // Resetar após 3 segundos
+                setTimeout(() => {
+                    searchInput.style.borderColor = '';
+                }, 3000);
             }
+        }
+    });
+
+    // Resetar estilo quando perde o foco
+    searchInput.addEventListener('blur', () => {
+        if (searchInput.value === '') {
+            searchInput.style.borderColor = '';
         }
     });
 }
