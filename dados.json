@@ -333,5 +333,10 @@
     "href": "https://www.overleaf.com/project",
     "img": "./imagens/overleaf.png",
     "alt": "Editor laTeX online"
+  },
+  {
+    "href": "https://www.cnnbrasil.com.br/",
+    "img": "./imagens/Notícias_-_CNN.png",
+    "alt": "Notícias - CNN - Brasil"
   }
 ]
