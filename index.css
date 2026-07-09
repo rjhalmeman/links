@@ -61,8 +61,37 @@ body {
     height: var(--item-size);
     position: relative;
     transform-style: preserve-3d;
-    /* Puxa o palco para trás para que o item da frente mantenha o tamanho original */
-    transform: translateZ(var(--translate-z)); 
+    
+    /* O SEGREDO ESTÁ AQUI: Adicionamos o rotateX para inclinar a "aliança".
+       Valores negativos (ex: -15deg, -30deg) dão a impressão de olhar de cima.
+       Valores positivos dão a impressão de olhar de baixo. */
+    transform: translateZ(var(--translate-z)) rotateX(-20deg); 
+}
+
+/* Ponto amarelo de seleção */
+.indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px; 
+    height: 20px;
+    background-color: #ffeb3b; /* Amarelo vibrante */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 235, 59, 0.8);
+    
+    /* Matemática 3D para posicionamento:
+       1. X: Centraliza na horizontal (Metade do item - metade da bolinha)
+       2. Y: Empurra para baixo do item (Tamanho do item + 25px de margem)
+       3. Z: Traz para a borda da frente invertendo a variável Z do JS (* -1)
+       4. RotateX: Anula a inclinação de -20deg do palco, fazendo a bolinha olhar direto para a tela
+    */
+    transform: 
+        translateX(calc(var(--item-size) / 2 - 10px)) 
+        translateY(calc(var(--item-size) + 25px)) 
+        translateZ(calc(var(--translate-z) * -1)) 
+        rotateX(20deg); 
+        
+    z-index: 100;
 }
 
 .carousel-item {
