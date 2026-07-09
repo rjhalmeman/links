@@ -1,18 +1,28 @@
 [
   {
-    "href": "https://calendar.google.com/",
-    "img": "./imagens/agenda.png",
-    "alt": "Google Calendar - Agenda"
-  },
-  {
     "href": "https://web.whatsapp.com/",
     "img": "./imagens/whatsapp.png",
     "alt": "Whatsapp"
   },
   {
+    "href": "https://calendar.google.com/",
+    "img": "./imagens/agenda.png",
+    "alt": "Google Calendar - Agenda"
+  },
+  {
+    "href": "https://calendar.google.com/calendar/u/0/r/tasks",
+    "img": "./imagens/Google_Tasks.png",
+    "alt": "Google Tasks - Calendario"
+  },
+  {
     "href": "https://mail.google.com/",
     "img": "./imagens/gmail.png",
-    "alt": "Gmail"
+    "alt": "Google Gmail"
+  },
+  {
+    "href": "https://mail.google.com/mail/u/0/#search/is%3Aunread+%2Bfacebook+OR+%2Blinkedin+OR+%2Blojadomecanico+OR+%2Bbanggood+OR+%2Bebay+OR+%2BAgenda+OR+%2BGOG+OR+%2Babes++OR+%2BKennedy++OR+%2BSmiles+OR+%2BTwitter+OR+%2BPinterest+OR+%2BAmazon+OR+%2BAliExpress+OR+%2BNetflix+OR+%2BResearchGate+OR+%2BAbastece+OR+Panvel+OR+lanterna+OR+Danki+OR+bcmed+OR+Alex+OR+Poisson+OR+Gshield+OR+prolife+OR+Lenscope+OR+wenes+OR+kabum+OR+Esparta+OR+Temu+OR+livelo+OR+kmv",
+    "img": "./imagens/Gmail_-_Limpar.png",
+    "alt": "Gmail - Limpar"
   },
   {
     "href": "https://drive.google.com/",
@@ -40,29 +50,34 @@
     "alt": "Youtube"
   },
   {
-    "href": "https://music.youtube.com/",
-    "img": "./imagens/ytMusic.jpeg",
-    "alt": "Youtube Music"
-  },
-  {
     "href": "https://keep.google.com/u/0/",
     "img": "./imagens/keep.jpeg",
     "alt": "Google Keep"
   },
   {
+    "href": "https://translate.google.com/",
+    "img": "./imagens/googletranslator.png",
+    "alt": "Google translator"
+  },
+  {
+    "href": "https://music.youtube.com/",
+    "img": "./imagens/ytMusic.jpeg",
+    "alt": "Youtube Music"
+  },
+  {
     "href": "https://sistemas2.utfpr.edu.br/",
     "img": "./imagens/utfprAcademico.png",
-    "alt": "Sistema Acadêmico UTFPR"
+    "alt": "UTFPR - Sistema Acadêmico"
   },
   {
     "href": "https://www.google.com/search?q=previsao+do+tempo+campo+mourao&oq=previsao+do+tempo+campo+mourao&gs_l=psy-ab.3..0l2j0i22i30k1l3.16242.22304.0.22632.13.13.0.0.0.0.107.1282.7j6.13.0....0...1.1.64.psy-ab..0.13.1277....0.-l0_OSgE3sg",
     "img": "./imagens/previsaoDoTempo.jpeg",
-    "alt": "Previsão do tempo"
+    "alt": "Previsão do tempo - Google"
   },
   {
     "href": "https://www.simepar.br/simepar/forecast_by_counties/4104303",
     "img": "./imagens/simepar.png",
-    "alt": "Simepar"
+    "alt": "Previsão do tempo - Simepar"
   },
   {
     "href": "http://www.bb.com.br/",
@@ -72,7 +87,7 @@
   {
     "href": "https://www.gov.br/servidor/pt-br/",
     "img": "./imagens/govbr.png",
-    "alt": "Sigepe"
+    "alt": "gov - Sigepe"
   },
   {
     "href": "https://www.mercadolivre.com.br/",
@@ -100,11 +115,6 @@
     "alt": "2026 - Dw1 no drive"
   },
   {
-    "href": "https://github.com/rjhalmeman/alfa",
-    "img": "./imagens/alfa.png",
-    "alt": "Github - repositório Alfa"
-  },
-  {
     "href": "https://github.com/rjhalmeman/algoritmos-2026/",
     "img": "./imagens/algoritmosGit.jpg",
     "alt": "2026 - Algoritmos no github "
@@ -125,6 +135,11 @@
     "alt": "Canal no Youtube - radames@professores"
   },
   {
+    "href": "https://github.com/rjhalmeman/alfa",
+    "img": "./imagens/alfa.png",
+    "alt": "Github - repositório Alfa"
+  },
+  {
     "href": "https://github.com/rjhalmeman",
     "img": "./imagens/git.png",
     "alt": "Github"
@@ -132,7 +147,17 @@
   {
     "href": "https://bitbucket.org/",
     "img": "./imagens/bitbucket.png",
-    "alt": "Bitbucket"
+    "alt": "Bitbucket - git alternativo"
+  },
+  {
+    "href": "https://docs.google.com/document/d/1zRhpQ_E-4CHpcMxCagkRsqww-hV2vDKEhK9wbecLtRY/edit?tab=t.0",
+    "img": "./imagens/gitDicas.png",
+    "alt": "Dicas git"
+  },
+  {
+    "href": "https://onedrive.live.com/?id=root&cid=006F2139754FBA4A",
+    "img": "./imagens/oneDrive.png",
+    "alt": "One drive microsoft"
   },
   {
     "href": "https://replit.com/@RadamesHalmeman",
@@ -143,16 +168,6 @@
     "href": "https://dontpad.com/radames",
     "img": "./imagens/dontpad.png",
     "alt": "Dont pad"
-  },
-  {
-    "href": "https://onedrive.live.com/?id=root&cid=006F2139754FBA4A",
-    "img": "./imagens/oneDrive.png",
-    "alt": "One drive microsoft"
-  },
-  {
-    "href": "https://mail.google.com/mail/u/0/#search/is%3Aunread+%2Bfacebook+OR+%2Blinkedin+OR+%2Blojadomecanico+OR+%2Bbanggood+OR+%2Bebay+OR+%2BAgenda+OR+%2BGOG+OR+%2Babes++OR+%2BKennedy++OR+%2BSmiles+OR+%2BTwitter+OR+%2BPinterest+OR+%2BAmazon+OR+%2BAliExpress+OR+%2BNetflix+OR+%2BResearchGate+OR+%2BAbastece+OR+Panvel+OR+lanterna+OR+Danki+OR+bcmed+OR+Alex+OR+Poisson+OR+Gshield+OR+prolife+OR+Lenscope+OR+wenes+OR+kabum+OR+Esparta+OR+Temu+OR+livelo+OR+kmv",
-    "img": "./imagens/gmail.png",
-    "alt": "Gmail - Limpar"
   },
   {
     "href": "https://docs.google.com/document/d/1BazlN3kS_R-v8RSiJmV5f1zPsxkkIML5rVD5i7vK6WE/edit?tab=t.0#heading=h.m09e6q1it3zj",
@@ -210,11 +225,6 @@
     "alt": "Chácara"
   },
   {
-    "href": "https://docs.google.com/document/d/1zRhpQ_E-4CHpcMxCagkRsqww-hV2vDKEhK9wbecLtRY/edit?tab=t.0",
-    "img": "./imagens/gitDicas.png",
-    "alt": "Dicas git"
-  },
-  {
     "href": "https://cp.freehostia.com/",
     "img": "./imagens/freehostia.png",
     "alt": "Freehostia"
@@ -230,6 +240,11 @@
     "alt": "App Inventor"
   },
   {
+    "href": "https://gopro.com/media-library",
+    "img": "./imagens/gopro.jpeg",
+    "alt": "GoPro fotos"
+  },
+  {
     "href": "https://drive.google.com/drive/u/0/folders/1iOHUBI_l92hMhJ1IbAYjLUDV8mpulF9",
     "img": "./imagens/pastaegressos.png",
     "alt": "Pasta egressos"
@@ -243,11 +258,6 @@
     "href": "https://docs.google.com/spreadsheets/d/1p7vgHoELfsDQTROxe0Xdh5hPn24g--0L7Vdttywk3qM/edit?gid=66679120#gid=66679120",
     "img": "./imagens/log.png",
     "alt": "LOG"
-  },
-  {
-    "href": "https://gopro.com/media-library",
-    "img": "./imagens/gopro.jpeg",
-    "alt": "GoPro fotos"
   },
   {
     "href": "https://docs.google.com/spreadsheets/d/1yxvKuZinUdwosppWVVmm9nzvYT4YsXALn19wABmI2fg/edit?gid=1612493588#gid=1612493588",
@@ -273,11 +283,6 @@
     "href": "https://bibleproject.com/",
     "img": "./imagens/holybible.jpeg",
     "alt": "Bible Project - English"
-  },
-  {
-    "href": "https://translate.google.com/",
-    "img": "./imagens/googletranslator.png",
-    "alt": "Google translator"
   },
   {
     "href": "https://x.com/home",
@@ -307,7 +312,7 @@
   {
     "href": "http://sei.utfpr.edu.br/",
     "img": "./imagens/sei.png",
-    "alt": "SEI"
+    "alt": "UTFPR - SEI"
   },
   {
     "href": "https://docs.google.com/document/d/1vo6bc020bmmx2223vIKSI8t1JQS41C68RMoMhVT3k0E/edit",
@@ -328,10 +333,5 @@
     "href": "https://www.overleaf.com/project",
     "img": "./imagens/overleaf.png",
     "alt": "Editor laTeX online"
-  },
-  {
-    "href": "https://calendar.google.com/calendar/u/0/r/tasks",
-    "img": "./imagens/Google_Tasks.png",
-    "alt": "Google Tasks - Calendario"
   }
 ]
