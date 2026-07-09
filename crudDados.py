@@ -25,7 +25,6 @@ class AppCRUD:
         self.dados = self.carregar_dados()
         self.indice_selecionado = None
 
-        # Garante que a pasta imagens existe
         os.makedirs(PASTA_IMAGENS, exist_ok=True)
 
         self.criar_interface()
@@ -59,12 +58,26 @@ class AppCRUD:
         entry_busca = ttk.Entry(frame_busca, textvariable=self.var_busca, width=40)
         entry_busca.pack(side=tk.LEFT)
 
-        # --- Frame Central (Tabela de Dados) ---
+        # --- Frame Central (Tabela de Dados e Ordenação) ---
         frame_tabela = ttk.Frame(self.root, padding="10")
         frame_tabela.pack(fill=tk.BOTH, expand=True)
 
+        # Botões de ordenação à direita
+        frame_ordem = ttk.Frame(frame_tabela)
+        frame_ordem.pack(side=tk.RIGHT, fill=tk.Y, padx=(10, 0))
+
+        ttk.Button(frame_ordem, text="⬆️ Subir", command=self.mover_cima, width=10).pack(side=tk.TOP, pady=(40, 5))
+        ttk.Button(frame_ordem, text="⬇️ Descer", command=self.mover_baixo, width=10).pack(side=tk.TOP, pady=5)
+
+        # Barra de rolagem
+        scrollbar = ttk.Scrollbar(frame_tabela, orient=tk.VERTICAL)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+        # Tabela (Treeview)
         colunas = ("alt", "href", "img")
-        self.tree = ttk.Treeview(frame_tabela, columns=colunas, show="headings", selectmode="browse")
+        self.tree = ttk.Treeview(frame_tabela, columns=colunas, show="headings", selectmode="browse", yscrollcommand=scrollbar.set)
+        scrollbar.config(command=self.tree.yview)
+
         self.tree.heading("alt", text="Nome (Alt)")
         self.tree.heading("href", text="Link (Href)")
         self.tree.heading("img", text="Caminho da Imagem (Img)")
@@ -72,12 +85,7 @@ class AppCRUD:
         self.tree.column("alt", width=200)
         self.tree.column("href", width=300)
         self.tree.column("img", width=300)
-
-        scrollbar = ttk.Scrollbar(frame_tabela, orient=tk.VERTICAL, command=self.tree.yview)
-        self.tree.configure(yscrollcommand=scrollbar.set)
-        
         self.tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
         self.tree.bind("<<TreeviewSelect>>", self.selecionar_item)
 
@@ -85,17 +93,14 @@ class AppCRUD:
         frame_form = ttk.LabelFrame(self.root, text="Dados do Item", padding="15")
         frame_form.pack(fill=tk.X, padx=10, pady=10)
 
-        # Linha 0: Nome (Alt)
         ttk.Label(frame_form, text="Nome (Alt):").grid(row=0, column=0, sticky=tk.W, pady=5)
         self.entry_alt = ttk.Entry(frame_form, width=72)
         self.entry_alt.grid(row=0, column=1, sticky=tk.W, pady=5, padx=5)
 
-        # Linha 1: Link (Href)
         ttk.Label(frame_form, text="Link (Href):").grid(row=1, column=0, sticky=tk.W, pady=5)
         self.entry_href = ttk.Entry(frame_form, width=72)
         self.entry_href.grid(row=1, column=1, sticky=tk.W, pady=5, padx=5)
 
-        # Linha 2: Imagem (Img) e Botões de Ação
         ttk.Label(frame_form, text="Imagem (Img):").grid(row=2, column=0, sticky=tk.W, pady=5)
         
         frame_img_actions = ttk.Frame(frame_form)
@@ -108,7 +113,6 @@ class AppCRUD:
         ttk.Button(frame_img_actions, text="Colar (Clip)", command=self.acao_clipboard, width=10).pack(side=tk.LEFT, padx=2)
         ttk.Button(frame_img_actions, text="Baixar URL", command=self.acao_url, width=10).pack(side=tk.LEFT, padx=2)
 
-        # Linha 3: Botões Principais do CRUD
         frame_botoes = ttk.Frame(frame_form)
         frame_botoes.grid(row=3, column=0, columnspan=2, pady=15)
 
@@ -117,7 +121,57 @@ class AppCRUD:
         ttk.Button(frame_botoes, text="Excluir", command=self.excluir_item).pack(side=tk.LEFT, padx=5)
 
     # ==========================================
-    # LÓGICA DE TRATAMENTO DE IMAGENS
+    # LÓGICA DE ORDENAÇÃO (MOVER CIMA / BAIXO)
+    # ==========================================
+    def mover_cima(self):
+        if self.indice_selecionado is None:
+            messagebox.showwarning("Aviso", "Selecione um item na tabela para mover.")
+            return
+            
+        idx = self.indice_selecionado
+        if idx > 0:
+            # Troca a posição na lista principal
+            self.dados[idx], self.dados[idx-1] = self.dados[idx-1], self.dados[idx]
+            self.salvar_dados()
+            
+            # Limpa o filtro de busca se houver, para não bugar a visualização
+            if self.var_busca.get():
+                self.var_busca.set("")
+            else:
+                self.atualizar_tabela()
+            
+            # Refoca no item que foi movido
+            novo_idx = idx - 1
+            self.tree.selection_set(novo_idx)
+            self.tree.focus(novo_idx)
+            self.tree.see(novo_idx)
+
+    def mover_baixo(self):
+        if self.indice_selecionado is None:
+            messagebox.showwarning("Aviso", "Selecione um item na tabela para mover.")
+            return
+            
+        idx = self.indice_selecionado
+        if idx < len(self.dados) - 1:
+            # Troca a posição na lista principal
+            self.dados[idx], self.dados[idx+1] = self.dados[idx+1], self.dados[idx]
+            self.salvar_dados()
+            
+            # Limpa o filtro de busca se houver
+            if self.var_busca.get():
+                self.var_busca.set("")
+            else:
+                self.atualizar_tabela()
+            
+            # Refoca no item que foi movido
+            novo_idx = idx + 1
+            self.tree.selection_set(novo_idx)
+            self.tree.focus(novo_idx)
+            self.tree.see(novo_idx)
+
+
+    # ==========================================
+    # LÓGICA DE TRATAMENTO DE IMAGENS E CRUD
     # ==========================================
     def gerar_caminho_imagem(self):
         alt_text = self.entry_alt.get().strip()
@@ -134,14 +188,10 @@ class AppCRUD:
             return
 
         try:
-            # Converte para RGBA para preservar transparência, depois redimensiona com alta qualidade
             img_obj = img_obj.convert("RGBA")
             img_obj = img_obj.resize((100, 100), Image.Resampling.LANCZOS)
-            
-            # Salva como PNG na pasta especificada
             img_obj.save(caminho, "PNG")
             
-            # Atualiza o campo de input visualmente
             caminho_relativo = f"./imagens/{os.path.basename(caminho)}"
             self.entry_img.delete(0, tk.END)
             self.entry_img.insert(0, caminho_relativo)
@@ -176,15 +226,12 @@ class AppCRUD:
         if url:
             try:
                 response = requests.get(url, stream=True, timeout=10)
-                response.raise_for_status() # Verifica se a requisição foi bem sucedida
+                response.raise_for_status() 
                 img = Image.open(response.raw)
                 self.processar_e_salvar_imagem(img)
             except Exception as e:
                 messagebox.showerror("Erro", f"Erro ao baixar imagem pela URL:\n{e}")
 
-    # ==========================================
-    # LÓGICA DO CRUD E TABELA
-    # ==========================================
     def atualizar_tabela(self, termo_busca=""):
         for item in self.tree.get_children():
             self.tree.delete(item)
@@ -234,8 +281,6 @@ class AppCRUD:
 
         self.salvar_dados()
         self.atualizar_tabela(self.var_busca.get())
-        
-        # Formulário limpo sem popup de notificação (UX)
         self.limpar_formulario()
 
     def excluir_item(self):
@@ -249,7 +294,6 @@ class AppCRUD:
             self.salvar_dados()
             self.atualizar_tabela(self.var_busca.get())
             self.limpar_formulario()
-            # Popup de sucesso também retirado da exclusão.
 
 if __name__ == "__main__":
     root = tk.Tk()
