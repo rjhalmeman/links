@@ -2,7 +2,7 @@
   {
     "href": "https://calendar.google.com/",
     "img": "./imagens/agenda.png",
-    "alt": "Agenda - Google Calendar"
+    "alt": "Google Calendar - Agenda"
   },
   {
     "href": "https://web.whatsapp.com/",
@@ -17,17 +17,17 @@
   {
     "href": "https://drive.google.com/",
     "img": "./imagens/drive.webp",
-    "alt": "Drive"
+    "alt": "Google Drive"
   },
   {
     "href": "https://classroom.google.com/",
     "img": "./imagens/classroom.png",
-    "alt": "Classroom"
+    "alt": "Google Classroom"
   },
   {
     "href": "https://maps.google.com/",
     "img": "./imagens/maps.png",
-    "alt": "Maps"
+    "alt": "Google Maps"
   },
   {
     "href": "https://photos.google.com",
@@ -102,7 +102,7 @@
   {
     "href": "https://github.com/rjhalmeman/alfa",
     "img": "./imagens/alfa.png",
-    "alt": "Alfa no github"
+    "alt": "Github - repositório Alfa"
   },
   {
     "href": "https://github.com/rjhalmeman/algoritmos-2026/",
@@ -170,7 +170,7 @@
     "alt": "FlightRadar24"
   },
   {
-    "href": " https://www.satview.org/?sat_id=20580U",
+    "href": "https://www.satview.org/?sat_id=20580U",
     "img": "./imagens/satview.png",
     "alt": "Satview"
   },
@@ -328,5 +328,10 @@
     "href": "https://www.overleaf.com/project",
     "img": "./imagens/overleaf.png",
     "alt": "Editor laTeX online"
+  },
+  {
+    "href": "https://calendar.google.com/calendar/u/0/r/tasks",
+    "img": "./imagens/Google_Tasks.png",
+    "alt": "Google Tasks - Calendario"
   }
 ]
