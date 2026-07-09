@@ -1,5 +1,10 @@
 [
   {
+    "href": "https://x.com/home",
+    "img": "./imagens/x.png",
+    "alt": "X - Twitter"
+  },
+  {
     "href": "https://web.whatsapp.com/",
     "img": "./imagens/whatsapp.png",
     "alt": "Whatsapp"
@@ -50,6 +55,11 @@
     "alt": "Youtube"
   },
   {
+    "href": "https://music.youtube.com/",
+    "img": "./imagens/ytMusic.jpeg",
+    "alt": "Youtube Music"
+  },
+  {
     "href": "https://keep.google.com/u/0/",
     "img": "./imagens/keep.jpeg",
     "alt": "Google Keep"
@@ -58,11 +68,6 @@
     "href": "https://translate.google.com/",
     "img": "./imagens/googletranslator.png",
     "alt": "Google translator"
-  },
-  {
-    "href": "https://music.youtube.com/",
-    "img": "./imagens/ytMusic.jpeg",
-    "alt": "Youtube Music"
   },
   {
     "href": "https://sistemas2.utfpr.edu.br/",
@@ -283,11 +288,6 @@
     "href": "https://bibleproject.com/",
     "img": "./imagens/holybible.jpeg",
     "alt": "Bible Project - English"
-  },
-  {
-    "href": "https://x.com/home",
-    "img": "./imagens/x.png",
-    "alt": "Twitter - X"
   },
   {
     "href": "https://script.google.com/a/macros/professores.utfpr.edu.br/s/AKfycbwvf1aGWLubDnqZalzOBSgcNs5tIHU5xp46CUFqEeRL/dev",
