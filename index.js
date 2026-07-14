@@ -11,13 +11,13 @@ const CONFIG = {
 
 let currentRotation = 0;
 let targetSpeed = 0;
-let radiusZ = 0; 
+let radiusZ = 0;
 let radiusX = 0;
 let totalItems = 0;
 let itemsData = [];
 let itemsElements = []; // Guarda as tags HTML <a> para animá-las no loop
 let carouselMode = 'mouse';
-let searchTargetRotation = 0; 
+let searchTargetRotation = 0;
 
 async function initCarousel() {
     try {
@@ -27,11 +27,11 @@ async function initCarousel() {
         itemsData = await response.json();
         const carousel = document.getElementById('carousel');
         const datalist = document.getElementById('carousel-options');
-        
-        totalItems = itemsData.length; 
+
+        totalItems = itemsData.length;
 
         // Profundidade da elipse (mantém o cálculo seguro anterior para o eixo Z)
-        const spacing = CONFIG.baseItemSize * CONFIG.spacingRatio; 
+        const spacing = CONFIG.baseItemSize * CONFIG.spacingRatio;
         radiusZ = Math.round((CONFIG.baseItemSize / 2) / Math.tan(Math.PI / totalItems)) + spacing;
 
         // Injeta variáveis CSS base
@@ -63,15 +63,16 @@ async function initCarousel() {
             const option = document.createElement('option');
             option.value = item.alt;
             datalist.appendChild(option);
+
         });
 
         updateDimensions();
         window.addEventListener('resize', updateDimensions);
-        
+
         setupMouseControl();
         setupSearchControl();
         animateCarousel();
-
+        document.getElementById("searchInput").focus();
     } catch (error) {
         console.error("Erro na inicialização:", error);
     }
@@ -89,9 +90,9 @@ function setupMouseControl() {
         const screenWidth = window.innerWidth;
         const mouseX = event.clientX;
         const position = (mouseX / screenWidth) * 2 - 1;
-        
+
         if (Math.abs(position) < 0.1) {
-            targetSpeed = 0; 
+            targetSpeed = 0;
         } else {
             targetSpeed = position * CONFIG.maxSpeed;
         }
@@ -113,7 +114,7 @@ function setupSearchControl() {
     // Escuta o evento de digitação
     searchInput.addEventListener('input', (e) => {
         const query = e.target.value.toLowerCase().trim();
-        
+
         if (query === '') {
             carouselMode = 'mouse';
             searchInput.style.borderColor = ''; // Resetar cor
@@ -121,7 +122,7 @@ function setupSearchControl() {
         }
 
         // Busca mais flexível - verifica se o termo está CONTIDO no alt
-        const matchIndex = itemsData.findIndex(item => 
+        const matchIndex = itemsData.findIndex(item =>
             item.alt.toLowerCase().includes(query) || // Busca por parte do texto
             item.alt.toLowerCase().split(' ').some(word => word.startsWith(query)) // Busca por palavra que começa com
         );
@@ -131,13 +132,13 @@ function setupSearchControl() {
             carouselMode = 'search';
             const itemAngle = matchIndex * (360 / totalItems);
             const target = -itemAngle;
-            
+
             let diff = (target - currentRotation) % 360;
             if (diff > 180) diff -= 360;
             if (diff < -180) diff += 360;
-            
+
             searchTargetRotation = currentRotation + diff;
-            
+
             // Feedback visual: borda verde quando encontra
             searchInput.style.borderColor = '#4CAF50';
             searchInput.style.borderWidth = '2px';
@@ -147,7 +148,7 @@ function setupSearchControl() {
             searchInput.style.borderColor = '#ff4444';
             searchInput.style.borderWidth = '2px';
             searchInput.style.borderStyle = 'solid';
-            
+
             // Opcional: mostrar mensagem de "não encontrado"
             // showSearchFeedback('Item não encontrado');
         }
@@ -157,13 +158,13 @@ function setupSearchControl() {
     searchInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             const query = e.target.value.toLowerCase().trim();
-            
+
             // Busca mais flexível também para o ENTER
-            const matchItem = itemsData.find(item => 
+            const matchItem = itemsData.find(item =>
                 item.alt.toLowerCase().includes(query) ||
                 item.alt.toLowerCase().split(' ').some(word => word.startsWith(query))
             );
-            
+
             if (matchItem) {
                 window.open(matchItem.href, '_blank');
                 // Limpar busca após abrir
@@ -175,10 +176,10 @@ function setupSearchControl() {
                 searchInput.style.borderColor = '#ff4444';
                 searchInput.style.borderWidth = '2px';
                 searchInput.style.borderStyle = 'solid';
-                
+
                 // Mostrar erro
                 showErrorNotification(`"${e.target.value}" não encontrado`);
-                
+
                 // Resetar após 3 segundos
                 setTimeout(() => {
                     searchInput.style.borderColor = '';
@@ -202,13 +203,13 @@ function animateCarousel() {
     } else if (carouselMode === 'search') {
         currentRotation += (searchTargetRotation - currentRotation) * CONFIG.easeFactor;
     }
-    
+
     // Posiciona e rotaciona cada item individualmente formando a elipse
     itemsElements.forEach((el, index) => {
         // Ângulo individual
         const baseAngle = index * (360 / totalItems);
         const currentItemAngle = baseAngle + currentRotation;
-        
+
         // Conversão para radianos (necessário para as funções Math.sin e Math.cos)
         const rad = currentItemAngle * (Math.PI / 180);
 
@@ -219,7 +220,7 @@ function animateCarousel() {
 
         el.style.transform = `translateX(${x}px) translateZ(${z}px) rotateY(${currentItemAngle}deg)`;
     });
-    
+
     requestAnimationFrame(animateCarousel);
 }
 
