@@ -343,5 +343,10 @@
     "href": "https://x.com/home",
     "img": "./imagens/x.png",
     "alt": "X - Twitter"
+  },
+  {
+    "href": "https://github.com/rjhalmeman/orientacoes/",
+    "img": "./imagens/Orientações_no_Git_-_TCC_-_Estágios.png",
+    "alt": "Orientações no Git - TCC - Estágios"
   }
 ]
