@@ -1,10 +1,5 @@
 [
   {
-    "href": "https://x.com/home",
-    "img": "./imagens/x.png",
-    "alt": "X - Twitter"
-  },
-  {
     "href": "https://web.whatsapp.com/",
     "img": "./imagens/whatsapp.png",
     "alt": "Whatsapp"
@@ -132,7 +127,12 @@
   {
     "href": "https://github.com/rjhalmeman/projeto-integrador-2026",
     "img": "./imagens/projeto-integrador.png",
-    "alt": "2026 - PI no github "
+    "alt": "2026 - PI no github - Projeto Integrador"
+  },
+  {
+    "href": "https://drive.google.com/drive/folders/12ulJyHJ1G77gBAaXRaq7rkVtjPYnwcZY",
+    "img": "./imagens/Projeto_Integrador_no_drive_-_PI.png",
+    "alt": "2026 - PI no drive - Projeto Integrador"
   },
   {
     "href": "https://www.youtube.com/@radamesjulianohalmeman8258",
@@ -277,7 +277,7 @@
   {
     "href": "https://drive.google.com/drive/folders/0B2rJ03w59OfkYlYtbG1yamszRXM",
     "img": "./imagens/irpfleao.png",
-    "alt": "IRPF - imposto de renda"
+    "alt": "IRPF - imposto de renda - drive"
   },
   {
     "href": "https://music.youtube.com/channel/UCpDd9PNiPHb12yyWo2miyog",
@@ -340,8 +340,8 @@
     "alt": "Notícias - CNN - Brasil"
   },
   {
-    "href": "https://drive.google.com/drive/folders/12ulJyHJ1G77gBAaXRaq7rkVtjPYnwcZY",
-    "img": "./imagens/Projeto_Integrador_no_drive_-_PI.png",
-    "alt": "2026 - PI no drive - Projeto Integrador"
+    "href": "https://x.com/home",
+    "img": "./imagens/x.png",
+    "alt": "X - Twitter"
   }
 ]
