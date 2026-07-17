@@ -18,6 +18,7 @@ let itemsData = [];
 let itemsElements = []; // Guarda as tags HTML <a> para animá-las no loop
 let carouselMode = 'mouse';
 let searchTargetRotation = 0;
+let isPaused = false; // [NOVO] Controla se o giro pelo mouse está pausado
 
 async function initCarousel() {
     try {
@@ -71,6 +72,7 @@ async function initCarousel() {
 
         setupMouseControl();
         setupSearchControl();
+        setupGlobalShortcuts(); // [NOVO] Ativa o atalho de teclado global
         animateCarousel();
         document.getElementById("searchInput").focus();
     } catch (error) {
@@ -83,9 +85,19 @@ function updateDimensions() {
     radiusX = window.innerWidth * CONFIG.ellipseWidthFactor;
 }
 
+// [NOVO] Função auxiliar para focar no input e selecionar o texto
+function focusAndSelectSearch() {
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.focus();
+        searchInput.select();
+    }
+}
+
 function setupMouseControl() {
     window.addEventListener('mousemove', (event) => {
-        if (carouselMode === 'search') return;
+        // [MODIFICADO] Se estiver no modo de busca ou pausado, ignora o movimento do mouse
+        if (carouselMode === 'search' || isPaused) return;
 
         const screenWidth = window.innerWidth;
         const mouseX = event.clientX;
@@ -100,6 +112,31 @@ function setupMouseControl() {
 
     document.addEventListener('mouseleave', () => {
         if (carouselMode === 'mouse') targetSpeed = 0;
+    });
+
+    // [NOVO] Detecta clique simples no fundo preto para pausar/retomar
+    document.addEventListener('click', (event) => {
+        // Verifica se o clique NÃO foi em um item do carrossel e NÃO foi no cabeçalho de busca
+        const clickedOnItem = event.target.closest('.carousel-item');
+        const clickedOnHeader = event.target.closest('.search-header');
+
+        if (!clickedOnItem && !clickedOnHeader) {
+            isPaused = !isPaused;
+            if (isPaused) {
+                targetSpeed = 0; // Para o giro imediatamente
+            }
+        }
+    });
+
+    // [NOVO] Detecta clique duplo no fundo preto para focar no input
+    document.addEventListener('dblclick', (event) => {
+        const clickedOnItem = event.target.closest('.carousel-item');
+        const clickedOnHeader = event.target.closest('.search-header');
+
+        if (!clickedOnItem && !clickedOnHeader) {
+            isPaused = false; // Retoma o carrossel ao ir para a busca, se desejar
+            focusAndSelectSearch();
+        }
     });
 }
 
@@ -130,6 +167,7 @@ function setupSearchControl() {
         if (matchIndex !== -1) {
             // Item encontrado!
             carouselMode = 'search';
+            isPaused = false; // [NOVO] Despausa automaticamente para mover até o item encontrado
             const itemAngle = matchIndex * (360 / totalItems);
             const target = -itemAngle;
 
@@ -148,9 +186,6 @@ function setupSearchControl() {
             searchInput.style.borderColor = '#ff4444';
             searchInput.style.borderWidth = '2px';
             searchInput.style.borderStyle = 'solid';
-
-            // Opcional: mostrar mensagem de "não encontrado"
-            // showSearchFeedback('Item não encontrado');
         }
     });
 
@@ -196,10 +231,24 @@ function setupSearchControl() {
     });
 }
 
+// [NOVO] Escuta o atalho Ctrl + Enter em qualquer lugar da página
+function setupGlobalShortcuts() {
+    window.addEventListener('keydown', (e) => {
+        if (e.ctrlKey && e.key === 'Enter') {
+            e.preventDefault(); // Evita comportamentos padrões indesejados
+            isPaused = false;   // Retoma o carrossel se estiver pausado
+            focusAndSelectSearch();
+        }
+    });
+}
+
 // O Loop de Animação - Calcula a elipse frame a frame
 function animateCarousel() {
     if (carouselMode === 'mouse') {
-        currentRotation += targetSpeed;
+        // [MODIFICADO] Só rotaciona se não estiver pausado
+        if (!isPaused) {
+            currentRotation += targetSpeed;
+        }
     } else if (carouselMode === 'search') {
         currentRotation += (searchTargetRotation - currentRotation) * CONFIG.easeFactor;
     }
