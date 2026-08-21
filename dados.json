@@ -280,6 +280,11 @@
     "alt": "IRPF - imposto de renda - drive"
   },
   {
+    "href": "https://contacts.google.com/",
+    "img": "./imagens/contacts.png",
+    "alt": "Contatos Google"
+  },
+  {
     "href": "https://music.youtube.com/channel/UCpDd9PNiPHb12yyWo2miyog",
     "img": "./imagens/englishAvenue.jpg",
     "alt": "English Avenue - canal de ingles no youtube"
