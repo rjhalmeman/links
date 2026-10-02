@@ -358,5 +358,13 @@
     "href": "https://hojenomundomilitar.com.br/",
     "img": "./imagens/Hoje_no_Mundo_Militar_-_Site.png",
     "alt": "Hoje no Mundo Militar - Site"
+  },
+  {
+    "href": "https://apoio.utfpr.edu.br/Intranet/",
+    "img": "./imagens/sistemaReservasUtfpr.png",
+    "alt": "Sistema de reservas de salas e/ou ambientes da UTFPR"
   }
+
+
+  
 ]
